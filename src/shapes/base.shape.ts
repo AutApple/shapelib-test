@@ -1,7 +1,7 @@
 /**
  * Base class for all shapes
  */
-export abstract class BaseShape {
+export abstract class BaseShape extends EventTarget {
 	/**
 	 * Returns an area of a shape
 	 * @returns area of a specified shape
@@ -25,5 +25,11 @@ export abstract class BaseShape {
 	 * @param factor factor by which the shape should be scaled
 	 * @returns new scaled shape instance
 	 */
-	public abstract scale(factor: number): BaseShape;
+	public scale(factor: number): BaseShape { 
+        const scaled = this.doScale(factor);
+        this.dispatchEvent(new Event('scale'));
+        return scaled;
+    }
+
+    protected abstract doScale(factor: number): BaseShape;
 }

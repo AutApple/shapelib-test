@@ -11,41 +11,43 @@ export interface CircleConfiguration {
  * Circle shape class
  */
 export class Circle extends BaseShape {
-	protected readonly radius: number;
-
+    protected readonly radius: number;
+    
 	/**
-	 * Circle shape constructor
-	 * @param config configuration with circle parameters specified
-	 */
-	constructor(config: CircleConfiguration) {
-		super();
-		this.radius = config.radius;
+     * Circle shape constructor
+     * @param config configuration with circle parameters specified
+    */
+   constructor(config: CircleConfiguration) {
+       super();
+       this.radius = config.radius;
 	}
-
+    
 	/**
-	 * Get circle's radius
-	 * @returns radius of a circle
-	 */
-	public getRadius(): number {
-		return this.radius;
+     * Get circle's radius
+     * @returns radius of a circle
+    */
+   public getRadius(): number {
+       return this.radius;
 	}
 	/**
-	 * Get circle's diameter
-	 * @returns diameter of a circle
-	 */
-	public getDiameter(): number {
-		return this.radius * 2;
+     * Get circle's diameter
+     * @returns diameter of a circle
+    */
+   public getDiameter(): number {
+       return this.radius * 2;
 	}
 	public getArea(): number {
-		return Math.PI * this.radius ** 2;
+        return Math.PI * this.radius ** 2;
 	}
 	public getPerimeter(): number {
-		return 2 * Math.PI * this.radius;
+        return 2 * Math.PI * this.radius;
 	}
-	public scale(factor: number): Circle {
-		return new Circle({ radius: this.radius * factor });
-	}
+    
 	public toString(): string {
-		return `Circle [radius = ${this.radius}]`;
+        return `Circle [radius = ${this.radius}]`;
 	}
+
+    protected doScale(factor: number): BaseShape {
+        return new Circle({ radius: this.radius * factor });
+    }
 }
