@@ -35,10 +35,10 @@ export abstract class BaseShape extends EventTarget {
 	 * @returns new scaled shape instance
 	 */
 	public scale(factor: number): BaseShape {
-		const scaled = this.doScale(factor);
+		const scaled = this.scaleBy(factor);
 		this.dispatchEvent(new ShapeScaleEvent(factor));
 		return scaled;
 	}
 
-	protected abstract doScale(factor: number): BaseShape;
+	protected abstract scaleBy(factor: number): BaseShape;
 }

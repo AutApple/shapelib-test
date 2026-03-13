@@ -47,7 +47,7 @@ export class Circle extends BaseShape {
 		return `Circle [radius = ${this.radius}]`;
 	}
 
-	protected doScale(factor: number): BaseShape {
+	protected scaleBy(factor: number): BaseShape {
 		return new Circle({ radius: this.radius * factor });
 	}
 }

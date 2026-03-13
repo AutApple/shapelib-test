@@ -48,7 +48,7 @@ export class Triangle extends BaseShape {
 		return `Triangle [a = ${this.a}, b = ${this.b}, c = ${this.c}]`;
 	}
 
-	protected doScale(factor: number): Triangle {
+	protected scaleBy(factor: number): Triangle {
 		return new Triangle({ a: this.a * factor, b: this.b * factor, c: this.c * factor });
 	}
 	/**

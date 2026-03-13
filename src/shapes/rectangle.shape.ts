@@ -54,7 +54,7 @@ export class Rectangle extends BaseShape {
 		return `Rectangle [width = ${this.width}, height = ${this.height}]`;
 	}
 
-	protected doScale(factor: number): Rectangle {
+	protected scaleBy(factor: number): Rectangle {
 		return new Rectangle({ width: this.width * factor, height: this.height * factor });
 	}
 }
