@@ -7,9 +7,10 @@ export interface TriangleConfiguration {
 }
 
 export class Triangle extends BaseShape {
-    protected a: number;
-    protected b: number;
-    protected c: number; 
+    protected readonly a: number;
+    protected readonly b: number;
+    protected readonly c: number; 
+    
     constructor (config: TriangleConfiguration) {
         super();
         this.a = config.a;
