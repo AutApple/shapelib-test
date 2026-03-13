@@ -36,6 +36,13 @@ export class Rectangle extends BaseShape {
 	public getDiagonal(): number {
 		return Math.sqrt(this.width ** 2 + this.height ** 2);
 	}
+	/**
+	 * Check whether rectangle is a square or not
+	 * @returns whether rectangle is a square or not
+	 */
+	public isSquare(): boolean {
+		return this.width === this.height;
+	}
 
 	public getArea(): number {
 		return this.width * this.height;
