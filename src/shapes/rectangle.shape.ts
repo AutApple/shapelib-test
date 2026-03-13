@@ -1,23 +1,35 @@
 import { BaseShape } from './base.shape.js';
-
+/**
+ * Interface for configuring cirlce parameters
+ */
 export interface RectangleConfiguration {
     width: number;
     height: number;
 }
 
+/**
+ * Rectangle shape class
+ */
 export class Rectangle extends BaseShape {
     protected readonly width: number;
     protected readonly height: number; 
-
+    /**
+     * Rectangle shape constructor
+     * @param config configuration with rectangle parameters specified
+     */
     constructor (config: RectangleConfiguration) {
         super();
         this.width = config.width;
         this.height = config.height;
     }
-
+    /**
+     * Get rectangle's width and height
+     * @returns width and height of a rectangle
+     */
     public getDimensions(): { width: number, height: number } {
         return { width: this.width, height: this.height };
     }
+    
     public getArea(): number {
         return this.width * this.height;
     }
