@@ -25,7 +25,7 @@ import { Rectangle } from 'shapelib';
 ## Использование
 
 ```ts
-import { Rectangle, Circle, Triangle } from 'shapelib';
+import { Rectangle, Circle, Triangle, ShapeScaleEvent } from 'shapelib';
 
 // Rectangle
 const rect = new Rectangle({ width: 10, height: 20 });
@@ -33,7 +33,10 @@ rect.getArea();       // 200
 rect.getPerimeter();  // 60
 rect.getDiagonal();   // 22.36
 rect.isSquare();      // false
-rect.scale(2);        // Rectangle [width = 20, height = 40]
+rect.addEventListener('scale', (e) => {
+    console.log(`Rect got scaled by ${(e as ShapeScaleEvent).factor}`); 
+});
+rect.scale(2);        // Rectangle [width = 20, height = 40] + Rect got scaled by 2
 
 // Circle
 const circle = new Circle({ radius: 5 });
@@ -60,7 +63,7 @@ class Trapezoid extends BaseShape {
     constructor(config: TrapezoidConfiguration) { super() }
     getArea(): number { ... }
     getPerimeter(): number { ... }
-    scale(factor: number): Trapezoid { ... }
+    protected doScale(factor: number): Trapezoid { ... } // Наследовать нужно именно doScale, так как scale не абстрактный в силу того что диспатчит событие
     toString(): string { ... }
 }
 ```
