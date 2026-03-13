@@ -48,7 +48,7 @@ triangle.isEquilateral()  // false
 Создайте новый класс, наследующий `BaseShape`, и реализуйте необходимые методы:
 
 ```ts
-import { BaseShape } from './src/shapes/base.shape.js'
+import { BaseShape } from './dist/index.js'
 
 class Trapezoid extends BaseShape {
     constructor(config: TrapezoidConfiguration) { super() }
