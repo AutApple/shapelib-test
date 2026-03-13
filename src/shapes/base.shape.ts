@@ -1,4 +1,13 @@
 /**
+ * Shape scale event
+ */
+export class ShapeScaleEvent extends Event {
+	constructor(public readonly factor: number) {
+		super('scale');
+	}
+}
+
+/**
  * Base class for all shapes
  */
 export abstract class BaseShape extends EventTarget {
@@ -25,11 +34,11 @@ export abstract class BaseShape extends EventTarget {
 	 * @param factor factor by which the shape should be scaled
 	 * @returns new scaled shape instance
 	 */
-	public scale(factor: number): BaseShape { 
-        const scaled = this.doScale(factor);
-        this.dispatchEvent(new Event('scale'));
-        return scaled;
-    }
+	public scale(factor: number): BaseShape {
+		const scaled = this.doScale(factor);
+		this.dispatchEvent(new ShapeScaleEvent(factor));
+		return scaled;
+	}
 
-    protected abstract doScale(factor: number): BaseShape;
+	protected abstract doScale(factor: number): BaseShape;
 }
