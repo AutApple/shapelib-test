@@ -19,6 +19,7 @@
     "dev": "npm run build && node dist/index.js"
   },
   "devDependencies": {
+    "prettier": "^3.8.1",
     "tsc": "^2.0.4"
   }
 }
