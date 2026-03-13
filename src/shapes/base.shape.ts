@@ -30,7 +30,8 @@ export abstract class BaseShape extends EventTarget {
 	public abstract toString(): string;
 
 	/**
-	 * Scales shape by some factor and returns a new, scaled shape instance
+	 * Scales shape by some factor and returns a new, scaled shape instance.
+     * Subclasses implement {@link scaleBy}.
 	 * @param factor factor by which the shape should be scaled
 	 * @returns new scaled shape instance
 	 */
@@ -40,5 +41,6 @@ export abstract class BaseShape extends EventTarget {
 		return scaled;
 	}
 
+    /** @see {@link scale} */
 	protected abstract scaleBy(factor: number): BaseShape;
 }
