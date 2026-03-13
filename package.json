@@ -15,11 +15,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "dev": "npm run build && node dist/index.js"
   },
   "devDependencies": {
     "prettier": "^3.8.1",
-    "tsc": "^2.0.4"
+    "typescript": "^5.9.3"
   }
 }
