@@ -17,5 +17,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm run build && node dist/index.js"
+  },
+  "devDependencies": {
+    "tsc": "^2.0.4"
   }
 }
