@@ -5,12 +5,12 @@
 ## Сборка и установка
 Склонируйте репозиторий, установите зависимости и скомпилируйте библиотеку:
 
-\```bash
+```bash
 git clone https://github.com/AutApple/shapelib-test
 cd shapelib-test
 npm install
 npm run build
-\```
+```
 
 Используйте скомпилированные файлы из `/dist`:
 ```ts
