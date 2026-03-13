@@ -6,8 +6,8 @@ export interface RectangleConfiguration {
 }
 
 export class Rectangle extends BaseShape {
-    protected width: number;
-    protected height: number; 
+    protected readonly width: number;
+    protected readonly height: number; 
 
     constructor (config: RectangleConfiguration) {
         super();
@@ -32,4 +32,5 @@ export class Rectangle extends BaseShape {
     public scale(factor: number): Rectangle {
         return new Rectangle({ width: this.width * factor, height: this.height * factor });
     }
+
 }
