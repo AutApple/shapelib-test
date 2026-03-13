@@ -4,4 +4,5 @@ export abstract class BaseShape {
     public abstract getArea(): number;
     public abstract getPerimeter(): number;
     public abstract toString(): string;
+    public abstract scale(factor: number): BaseShape;
 }
