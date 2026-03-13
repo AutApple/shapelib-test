@@ -1,0 +1,20 @@
+{
+  "name": "shapelib-test",
+  "version": "1.0.0",
+  "description": "Shape library",
+  "homepage": "https://github.com/AutApple/shapelib-test#readme",
+  "bugs": {
+    "url": "https://github.com/AutApple/shapelib-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutApple/shapelib-test.git"
+  },
+  "license": "ISC",
+  "author": "wwhhooami",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
