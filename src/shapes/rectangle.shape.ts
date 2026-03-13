@@ -29,6 +29,13 @@ export class Rectangle extends BaseShape {
     public getDimensions(): { width: number, height: number } {
         return { width: this.width, height: this.height };
     }
+    /**
+     * Get rectangle's diagonal
+     * @returns diagonal of a rectangle
+     */
+    public getDiagonal(): number {
+        return Math.sqrt(this.width ** 2 + this.height ** 2);
+    }
     
     public getArea(): number {
         return this.width * this.height;
