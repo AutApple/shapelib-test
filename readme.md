@@ -67,24 +67,3 @@ class Trapezoid extends BaseShape {
     toString(): string { ... }
 }
 ```
-
-## Краткая сводка API
-
-### Rectangle
-- getArea()
-- getPerimeter()
-- getDiagonal()
-- isSquare()
-- scale()
-
-### Circle
-- getArea()
-- getDiameter()
-- getPerimeter()
-- getRadius()
-
-### Triangle
-- getArea()
-- isRight()
-- isIsosceles()
-- isEquilateral()
