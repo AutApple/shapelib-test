@@ -1,11 +1,4 @@
-/**
- * Shape scale event
- */
-export class ShapeScaleEvent extends Event {
-	constructor(public readonly factor: number) {
-		super('scale');
-	}
-}
+import { ShapeScaleEvent } from './events/shape-scale.event.js';
 
 /**
  * Base class for all shapes
@@ -31,7 +24,7 @@ export abstract class BaseShape extends EventTarget {
 
 	/**
 	 * Scales shape by some factor and returns a new, scaled shape instance.
-     * Subclasses implement {@link scaleBy}.
+	 * Subclasses implement {@link scaleBy}.
 	 * @param factor factor by which the shape should be scaled
 	 * @returns new scaled shape instance
 	 */
@@ -41,6 +34,6 @@ export abstract class BaseShape extends EventTarget {
 		return scaled;
 	}
 
-    /** @see {@link scale} */
+	/** @see {@link scale} */
 	protected abstract scaleBy(factor: number): BaseShape;
 }
