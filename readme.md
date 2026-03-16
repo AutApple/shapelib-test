@@ -63,7 +63,7 @@ class Trapezoid extends BaseShape {
     constructor(config: TrapezoidConfiguration) { super() }
     getArea(): number { ... }
     getPerimeter(): number { ... }
-    protected doScale(factor: number): Trapezoid { ... } // Наследовать нужно именно doScale, так как scale не абстрактный в силу того что диспатчит событие
+    protected scaleBy(factor: number): Trapezoid { ... } // Наследовать нужно именно scaleBy, так как scale не абстрактный в силу того что диспатчит событие
     toString(): string { ... }
 }
 ```
